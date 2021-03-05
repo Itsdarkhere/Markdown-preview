@@ -6,28 +6,37 @@
   left: 0;
   min-height: 100%;
   overflow: auto;
+  background-image: url("multicolor.png");
+  background-repeat: round;
 }
 #editor-container {
   display: flex;
+  flex-direction: column;
   height: 400px;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  /*background-color: lightgoldenrodyellow; */
 }
 #preview-container {
   display: flex;
   align-items: flex-start;
   justify-content: center;  
-  background-color: white;
+ /* background-color: lightgoldenrodyellow;*/
   min-height: 450px;
   max-height: 1000;
 } 
-
 #editor { 
   height: 250px;    
   width: 600px; 
-  border-top: 30px solid black;
-  background-color: lightgrey;
+  border-top: 30px solid rgba( 255, 255, 255, 0.45);
+
+  /* everything under this adds the glassmorphism to the textarea */
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 #preview {
   min-height: 150px;
@@ -37,16 +46,25 @@
   overflow: hidden;
   resize: none;
   border-top: 30px solid black;
+
+  /* everything under this adds the glassmorphism to the div */   
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );  
+} 
+#tag {
+  font-size: 20px;
+  color: lightgray;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );  
 }
-#preview-expand {
+#tag-container {
   position: relative;
-  left: 795px;
-  top: 5px; 
-  color: white;
-}
-#editor-expand {
-  color: white;
-  position: relative;
-  bottom: 127px;
-  left: 600px;
+  top: 20px;
 }

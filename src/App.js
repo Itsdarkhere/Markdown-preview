@@ -29,8 +29,8 @@ export class Editor extends React.Component {
 
     return (
       <div id="editor-container">
-        <FontAwesomeIcon icon={faExpandArrowsAlt} id="editor-expand"/>
         <textarea id="editor" onChange={this.sendHtml} defaultValue={this.state.startValue}></textarea>
+        <div id="tag-container"><h1 id="tag">@Itsdarkhere</h1></div>
       </div>
     )
   }
@@ -62,8 +62,7 @@ export class Preview extends React.Component {
     
     return (
       <div id="preview-container">
-        <FontAwesomeIcon icon={faExpandArrowsAlt} id="preview-expand"/>
-        <div id="preview" contentEditable="true"></div>
+        <div id="preview" contentEditable="false"></div>
       </div>
     )
   }
